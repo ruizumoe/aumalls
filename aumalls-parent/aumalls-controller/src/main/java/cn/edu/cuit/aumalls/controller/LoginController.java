@@ -26,10 +26,10 @@ public class LoginController {
 		
 		boolean ref =  userLoginService.findUser(username,password);
 		if(ref) {
-			return "success";
+			return "list";
 		}
 		else {
-			model.addAttribute("loginErrorMsg", "用户名或密码有误");
+			model.addAttribute("loginErrorMsg", "鐢ㄦ埛鍚嶆垨瀵嗙爜鏈夎");
 			model.addAttribute("username",username);
 			return "login";
 		}

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+   <%String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath(); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,13 +59,14 @@
 							<span>登录澳猫团</span>
 							<a target="_blank" href="register.html">免费注册</a>
 						</h3>
+						<form method="post" action = "<%=request.getContextPath()%>/login" id = "loginForm">
 						<p class="userName">
 							<em></em>
-							<input class="W310" placeholder="请输入您的手机号/邮箱" type="text">
+							<input class="W310" placeholder="请输入您的手机号/邮箱" type="text" name="username">
 						</p>
 						<p class="passWord">
 							<em></em>
-							<input class="W310" placeholder="请输入密码" type="password">
+							<input class="W310" placeholder="请输入密码" type="password" name="password">
 						</p>
 						<p class="clearfix yzm">
 							<input type="text" placeholder="验证码">
@@ -77,8 +80,11 @@
 							<span>记住密码</span>
 							<a target="_blank" href="#">忘记密码？</a>
 						</p>
-						<a class="loGin W310" href="#">登录</a>
+						 <!-- <input type="submit" class="loGin W310" value = "登录">  -->
+						 <a class="loGin W310" onclick="document.getElementById('loginForm').submit();">登录</a> 
+					</form>
 					</div>
+					
 					<div class="MCleft W115">
 						<img src="images/AppEr.png" alt="二维码">
 						<p>扫码下载客户端</p>
