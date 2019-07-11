@@ -4,85 +4,141 @@
 <html>
 <head>
 <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="Content-Language" content="en" />
-    <meta name="msapplication-TileColor" content="#2d89ef">
-    <meta name="theme-color" content="#4188c9">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <link rel="icon" href="<%=request.getContextPath()%>/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/favicon.ico" />
-    <!-- Generated: 2019-04-04 16:57:42 +0200 -->
-    <title>Login - tabler.github.io - a responsive, flat and full featured admin template</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
-    <script src="<%=request.getContextPath()%>/js/require.min.js"></script>
-    <script>
-      requirejs.config({
-          baseUrl: '.'
-      });
-    </script>
-    <!-- Dashboard Core -->
-    <link href="<%=request.getContextPath()%>/css/dashboard.css" rel="stylesheet" />
-    <script src="<%=request.getContextPath()%>/js/dashboard.js"></script>
-    <!-- c3.js Charts Plugin -->
-    <link href="<%=request.getContextPath()%>/plugins/charts-c3/plugin.css" rel="stylesheet" />
-    <script src="<%=request.getContextPath()%>/plugins/charts-c3/plugin.js"></script>
-    <!-- Google Maps Plugin -->
-    <link href="<%=request.getContextPath()%>/plugins/maps-google/plugin.css" rel="stylesheet" />
-    <script src="<%=request.getContextPath()%>/plugins/maps-google/plugin.js"></script>
-    <!-- Input Mask Plugin -->
-    <script src="<%=request.getContextPath()%>/plugins/input-mask/plugin.js"></script>
-    <!-- Datatables Plugin -->
-    <script src="<%=request.getContextPath()%>/plugins/datatables/plugin.js"></script>
+	<title>登录页-澳猫团</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/reset.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/base1.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/login.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+	<link media="screen and (min-width: 992px) and (max-width:1200px)" rel="stylesheet" href="css/base1-small.css">
+	<link media="screen and (min-width: 992px) and (max-width:1200px)" rel="stylesheet" href="css/login-small.css">
+	<link media="screen and (min-width: 768px) and (max-width:991px)" rel="stylesheet" href="css/base1-pad.css">
+	<link media="screen and (min-width: 768px) and (max-width:991px)" rel="stylesheet" href="css/login-pad.css">
 </head>
 <body>
-<div class="page">
-      <div class="page-single">
-        <div class="container">
-          <div class="row">
-            <div class="col col-login mx-auto">
-              <div class="text-center mb-6">
-                <img src="<%=request.getContextPath()%>/demo/brand/tabler.svg" class="h-6" alt="">
-              </div>
-              <form class="card" action="login" method="post">
-                <div class="card-body p-6">
-                  <div class="card-title">Login to your account</div>
-                  <div class="form-group">
-                    <label class="form-label">Email address</label>
-                    <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="username" name="username" value = "${username}">
-                  </div>
-                  <div class="form-group">
-                    <label class="form-label">
-                      Password
-                      <a href="#" class="float-right small">I forgot password</a>
-                    </label>
-                    <input type="password" class="form-control" id="password" placeholder="Password" name="password">
-                  </div>
-                  <div class="form-group">
-                    <label class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" />
-                      <span class="custom-control-label">Remember me</span>
-                    </label>
-                  </div>
-                  <div class="form-footer">
-                    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                    <div>${loginEorroMsg}</div>
-                    
-                  </div>
-                </div>
-              </form>
-              <div class="text-center text-muted">
-                Don't have account yet? <a href="#">Sign up</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- 顶部 -->
+	<header>
+		<!-- 搜索和logo -->
+		<div class="logoAndSearch textWarp w1190 clearfix">
+			<div class="logo">
+				<a href="#">澳猫网</a>
+			</div>
+			<div class="LAStxt">
+				欢迎登录
+			</div>
+			<div class="search">
+				<div class="txt">
+					<input type="text" placeholder="Swisse/澳洲">
+					<em></em>
+				</div>
+				<a href="#" class="btn">
+					搜索
+				</a>
+				<ul>
+					<li><a target="_blank" href="#">胶原蛋白</a></li>
+					<li><a target="_blank" href="#">叶绿素</a></li>
+					<li><a target="_blank" href="#">睡眠片</a></li>
+					<li><a target="_blank" href="#">儿童维生素</a></li>
+					<li><a target="_blank" href="#">鱼肝油</a></li>
+					<li><a target="_blank" href="#">保健品</a></li>
+					<li><a target="_blank" href="#">美容</a></li>
+					<li class="BN"><a target="_blank" href="#">运动保健</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- 中间内容 -->
+	<div class="mainArea">
+		<div class="mainAreaW textWarp w1190">
+			<div class="mainContent boxS">
+				<div class="MCup clearfix">
+					<div class="MCright W310">
+						<h3 class="clearfix">
+							<span>登录澳猫团</span>
+							<a target="_blank" href="register.html">免费注册</a>
+						</h3>
+						<p class="userName">
+							<em></em>
+							<input class="W310" placeholder="请输入您的手机号/邮箱" type="text">
+						</p>
+						<p class="passWord">
+							<em></em>
+							<input class="W310" placeholder="请输入密码" type="password">
+						</p>
+						<p class="clearfix yzm">
+							<input type="text" placeholder="验证码">
+							<span class="Ypic">
+								<span class="YP"></span>
+								<a href="#">换一张</a>
+							</span>
+						</p>
+						<p class="clearfix Jzmm">
+							<span class="checkbox checked"></span>
+							<span>记住密码</span>
+							<a target="_blank" href="#">忘记密码？</a>
+						</p>
+						<a class="loGin W310" href="#">登录</a>
+					</div>
+					<div class="MCleft W115">
+						<img src="images/AppEr.png" alt="二维码">
+						<p>扫码下载客户端</p>
+						<div class="pL">
+							<span>手机可直接访问</span>
+							<strong>m.aumalls.com</strong>
+						</div>
+					</div>
+				</div>
+				<div class="MCdown">
+					<p>使用其他账户登录</p>
+					<ul>
+						<li class="clearfix">
+							<em></em>
+							<a href="#">QQ登录</a>
+						</li>
+						<li class="clearfix">
+							<em></em>
+							<a href="#">微博登录</a>
+						</li>
+						<li class="clearfix">
+							<em></em>
+							<a href="#">腾讯微博</a>
+						</li>
+						<li class="clearfix">
+							<em></em>
+							<a href="#">微信登录</a>
+						</li>
+						<li class="clearfix BN">
+							<em></em>
+							<a href="#">百度登录</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部 -->
+	<footer>
+		<div class="txt textWarp w1190">       
+			<ul>
+				<li><a href="#">关于澳猫海淘</a></li>
+				<li><a href="#">商家入驻</a></li>
+				<li><a href="#">网站合作</a></li>
+				<li><a href="#">友情链接</a></li>
+				<li><a href="#">澳猫公益</a></li>
+				<li><a href="#">法律声明</a></li>
+				<li><a href="#">诚聘英才</a></li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">网站地图</a></li>
+			</ul>
+			<p>
+				澳大利亚Health more - 河南康多多贸易有限公司 - 河南澳蜜电子商务有限公司 版权所有<br>
+				Copyright © 20015-2018  澳猫aumalls.com 版权所有, 豫ICP备15030837号-1
+			</p>
+			<div class="ALLN"></div>
+		</div>
+	</footer>
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/jquery.lazyload.min.js"></script>
+	<script src="js/login.js"></script>
 </body>
 </html>
