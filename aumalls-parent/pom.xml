@@ -48,7 +48,7 @@
 			<dependency>
 				<groupId>org.mybatis</groupId>
 				<artifactId>mybatis</artifactId>
-				<version>3.5.1</version>
+				<version>3.5.6</version>
 			</dependency>
 
 			<!-- 集成sping+mybatis 由于spring和springMVC是一个公司产品，因此不需要再集成该两个 -->
